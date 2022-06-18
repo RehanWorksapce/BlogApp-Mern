@@ -7,6 +7,7 @@ import MessageIcon from '@mui/icons-material/Message';
 import ReportIcon from '@mui/icons-material/Report';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import SettingsIcon from '@mui/icons-material/Settings';
+import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <>
@@ -16,33 +17,35 @@ const Header = () => {
 <br></br>
 <br></br>
 <div className='nav-bar'>
-<div className='iconcontainer home'>
-<HomeRoundedIcon  link="/home" sx={{ fontSize: 50 }} className='ico' />
-<div className='home2'>Home</div>
-</div>
 
-<div className='iconcontainer'>
+<Link to="/" className='iconcontainer home'>
+<HomeRoundedIcon  sx={{ fontSize: 50 }} className='ico' />
+<div className='home2'>Home</div>
+</Link>
+
+
+<Link to="/User-Setting" className='iconcontainer'>
 <ManageAccountsIcon  sx={{ fontSize: 50 }} className='ico' />
 <div className='home2'>User</div>
-</div>
-<div className='iconcontainer'>
+</Link>
+<Link to="Talk-Rooms"className='iconcontainer'>
 <MessageIcon sx={{ fontSize: 50 }} className='ico' />
 <div className='home2'>Talk</div>
-</div>
-<div className='iconcontainer'>
+</Link>
+<Link to= "/Report"  className='iconcontainer'>
 <ReportIcon sx={{ fontSize: 50 }} className='ico' />
 <div className='home2'>Report</div>
-</div>
-<div className='iconcontainer'>
+</Link>
+<Link to="/Fun-Rooms" className='iconcontainer'>
 <StarRoundedIcon sx={{ fontSize: 50 }} className='ico-star' />
 <div className='home2'>Fun</div>
-</div>
+</Link>
 </div>
 <div className='nav-bar-bottom'>
-<div className='iconcontainer'>
+<Link to="/Setting" className='iconcontainer'>
 <SettingsIcon sx={{ fontSize: 50 }} className='ico' />
 <div className='home2'>Setting</div>
-</div>
+</Link>
 </div>
 </div>
 </>
